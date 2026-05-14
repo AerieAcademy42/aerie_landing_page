@@ -1,0 +1,28 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+export const metadata: Metadata = {
+  title: 'Aerie Academy | GATE 2026 Architecture & Planning',
+  description: 'Join 3000+ students who have trusted Aerie Academy to crack IITs, NITs & SPAs. Structured program for GATE 2026 Architecture & Planning.',
+  generator: 'v0.app',
+  keywords: ['GATE 2026', 'Architecture', 'Planning', 'IIT', 'NIT', 'SPA', 'Coaching'],
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" className="bg-background scroll-smooth">
+      <body className={`${inter.variable} font-sans antialiased`}>
+        {children}
+        {process.env.NODE_ENV === 'production' && <Analytics />}
+      </body>
+    </html>
+  )
+}
