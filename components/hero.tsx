@@ -1,12 +1,20 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ArrowRight, Users, Award, BookOpen, Star, Play, CheckCircle } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  ArrowRight,
+  Award,
+  BookOpen,
+  CheckCircle,
+  Play,
+  Star,
+  Users,
+} from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const words = ["structured", "comprehensive", "expert-led", "proven"]
+const words = ["structured", "comprehensive", "expert-led", "proven"];
 
 const carouselCards = [
   {
@@ -27,53 +35,53 @@ const carouselCards = [
     icon: CheckCircle,
     color: "bg-gradient-to-br from-indigo-500 to-blue-500",
   },
-]
+];
 
 export function Hero() {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0)
-  const [displayText, setDisplayText] = useState("")
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [activeCard, setActiveCard] = useState(0)
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [activeCard, setActiveCard] = useState(0);
 
   useEffect(() => {
-    const currentWord = words[currentWordIndex]
+    const currentWord = words[currentWordIndex];
     const timeout = setTimeout(
       () => {
         if (!isDeleting) {
           if (displayText.length < currentWord.length) {
-            setDisplayText(currentWord.slice(0, displayText.length + 1))
+            setDisplayText(currentWord.slice(0, displayText.length + 1));
           } else {
-            setTimeout(() => setIsDeleting(true), 2000)
+            setTimeout(() => setIsDeleting(true), 2000);
           }
         } else {
           if (displayText.length > 0) {
-            setDisplayText(displayText.slice(0, -1))
+            setDisplayText(displayText.slice(0, -1));
           } else {
-            setIsDeleting(false)
-            setCurrentWordIndex((prev) => (prev + 1) % words.length)
+            setIsDeleting(false);
+            setCurrentWordIndex((prev) => (prev + 1) % words.length);
           }
         }
       },
-      isDeleting ? 50 : 100
-    )
-    return () => clearTimeout(timeout)
-  }, [displayText, isDeleting, currentWordIndex])
+      isDeleting ? 50 : 100,
+    );
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentWordIndex]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveCard((prev) => (prev + 1) % carouselCards.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+      setActiveCard((prev) => (prev + 1) % carouselCards.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const stats = [
     { icon: Users, number: "3000+", label: "Students Enrolled" },
     { icon: Award, number: "500+", label: "IIT/NIT Selections" },
     { icon: BookOpen, number: "50+", label: "Expert Faculty" },
-  ]
+  ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 relative overflow-hidden pt-20">
+    <section className="min-h-screen bg-gradient-to-br from-slate-900 to-[rgb(77,113,197)] relative overflow-hidden pt-10">
       {/* Animated background elements */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
@@ -112,27 +120,31 @@ export function Hero() {
               className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm font-medium">Admissions Open for GATE 2026</span>
+              <span className="text-white/90 text-sm font-medium">
+                A 3-month program · Aerie Academy
+              </span>
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
-              Are you looking for{" "}
-              <span className="text-white bg-white/20 px-2 rounded">
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight text-white opacity-70">
+              Design what was previously impossible to draw{" "}
+              {/* <span className="text-white bg-white/20 px-2 rounded">
                 {displayText}
                 <span className="cursor-blink text-white/80">|</span>
-              </span>
-              <br />
-              <span className="mt-2 block">program for GATE 2026</span>
-              <span className="block text-white/90">Architecture & Planning?</span>
+              </span> */}
+              {/* <span className="mt-2 block">previously impossible</span>
+              <span className="block text-white/90">to draw</span> */}
             </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-6 text-lg text-white/80 max-w-lg leading-relaxed"
+              className="mt-6 text-sm text-white/80 leading-relaxed"
             >
-              Join 3000+ students who&apos;ve trusted Aerie to crack IITs, NITs & SPAs with our structured curriculum and expert guidance.
+              A focused, mentor-led course that takes you from the basics of
+              computational thinking to intermediate parametric workflows in
+              Rhino and Grasshopper — built for architects, designers, and
+              students who want to think in systems, not just shapes.
             </motion.p>
 
             <motion.div
@@ -141,13 +153,22 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 pt-8"
             >
-              <Button size="lg" asChild className="text-lg px-8 py-6 bg-white text-blue-700 hover:bg-white/90 font-semibold shadow-xl shadow-blue-900/30">
+              <Button
+                size="lg"
+                asChild
+                className="text-lg px-8 py-6 bg-white text-blue-700 hover:bg-white/90 font-semibold shadow-xl shadow-blue-900/30"
+              >
                 <Link href="#courses">
                   Explore Courses
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm">
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
+              >
                 <Link href="#contact">Get Free Counseling</Link>
               </Button>
             </motion.div>
@@ -194,8 +215,8 @@ export function Hero() {
                 >
                   <div className="bg-white/20 rounded-2xl p-4 w-fit mb-6">
                     {(() => {
-                      const Icon = carouselCards[activeCard].icon
-                      return <Icon className="w-10 h-10 text-white" />
+                      const Icon = carouselCards[activeCard].icon;
+                      return <Icon className="w-10 h-10 text-white" />;
                     })()}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">
@@ -235,7 +256,9 @@ export function Hero() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900">500+</div>
-                    <div className="text-xs text-gray-500">IIT/NIT Selections</div>
+                    <div className="text-xs text-gray-500">
+                      IIT/NIT Selections
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -294,5 +317,5 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,27 +1,31 @@
-import { Navbar } from "@/components/navbar"
-import { Hero } from "@/components/hero"
-import { Features } from "@/components/features"
-import { About } from "@/components/about"
-import { Courses } from "@/components/courses"
-import { Testimonials } from "@/components/testimonials"
-import { Team } from "@/components/team"
-import { FAQ } from "@/components/faq"
-import { Contact } from "@/components/contact"
-import { Footer } from "@/components/footer"
+import { About } from "@/components/about";
+import { Contact } from "@/components/contact";
+import { FAQ } from "@/components/faq";
+import { Footer } from "@/components/footer";
+import { Hero } from "@/components/hero";
+import HowItWorks from "@/components/howit-work";
+import { Navbar } from "@/components/navbar";
+import Stack from "@/components/stack";
+import { Team } from "@/components/team";
+import { Testimonials } from "@/components/testimonials";
+import WhyAerie from "@/components/why-Aerie";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Features />
+      {/* <Features /> */}
       <About />
-      <Courses />
+      <HowItWorks />
+      <Stack />
+      <WhyAerie />
+      {/* <Courses /> */}
       <Testimonials />
       <Team />
       <FAQ />
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }

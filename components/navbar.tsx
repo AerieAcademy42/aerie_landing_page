@@ -1,20 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { href: "#features", label: "Features" },
     { href: "#courses", label: "Courses" },
     { href: "#team", label: "Team" },
     { href: "#faq", label: "FAQ" },
-  ]
+  ];
 
   return (
     <motion.nav
@@ -27,8 +28,23 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-primary">Aerie</span>
-              <span className="text-2xl font-light text-foreground">Academy</span>
+              {/* <img
+                src="Aerie_logo.png"
+                alt="Aerie Academy Logo"
+                className="object-contain"
+              />
+              {/* <span className="text-2xl font-bold text-primary">Aerie</span>
+              <span className="text-2xl font-light text-foreground">
+                Academy
+              </span> */}
+
+              <Image
+                src="/Aerie_logo.png"
+                alt="Aerie Academy Logo"
+                width={140}
+                height={40}
+                className=" object-contain"
+              />
             </Link>
           </motion.div>
 
@@ -89,7 +105,10 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <Button asChild className="w-full mt-4 gradient-blue border-0 text-white">
+              <Button
+                asChild
+                className="w-full mt-4 gradient-blue border-0 text-white"
+              >
                 <Link href="#contact" onClick={() => setIsOpen(false)}>
                   Contact Us
                 </Link>
@@ -99,5 +118,5 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </motion.nav>
-  )
+  );
 }
