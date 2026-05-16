@@ -1,47 +1,55 @@
-"use client"
+"use client";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { motion } from "framer-motion"
+} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "What is the eligibility for GATE Architecture exam?",
-    answer: "Candidates must have completed or be in the final year of their Bachelor's degree in Architecture (B.Arch) from a recognized university. There is no age limit for appearing in GATE."
+    question: "Do I need to know how to code?",
+    answer:
+      "No. Grasshopper is visual programming — you'll be working with components and wires, not syntax. We teach the logic from scratch and you'll build fluency through doing.",
   },
   {
-    question: "How long is the course validity?",
-    answer: "Our Foundation and Comprehensive batches come with lifetime access to recorded lectures. Live classes are available for the duration mentioned in each course (8 months or 12 months respectively)."
+    question: "Do I need to own Rhino already?",
+    answer:
+      "You'll need access to it. Rhino offers a 90-day free trial that covers most of the course, and we'll help you decide whether a full license is worth it for the career you're building toward.",
   },
   {
-    question: "Can I access the course on mobile devices?",
-    answer: "Yes! Our platform is fully responsive and works seamlessly on mobile phones, tablets, and desktops. You can also download the lectures for offline viewing through our app."
+    question: "What if I miss a class?",
+    answer:
+      "Every session is recorded. You'll also have weekly office hours and a cohort channel to catch up. We recommend attending live, but the course is built so that life can happen without you falling behind.",
   },
   {
     question: "What if I miss a live class?",
-    answer: "All live classes are recorded and uploaded within 24 hours. You can watch them at your convenience. However, we encourage attending live sessions for real-time doubt clearing."
+    answer:
+      "All live classes are recorded and uploaded within 24 hours. You can watch them at your convenience. However, we encourage attending live sessions for real-time doubt clearing.",
   },
   {
-    question: "Do you provide study material in physical form?",
-    answer: "Currently, all our study materials are digital (PDFs, e-notes). This allows for easy updates and accessibility. However, we can arrange printed materials on request at additional cost."
+    question: "Is this enough to get a job in computational design?",
+    answer:
+      "Three months gets you to a strong intermediate level — enough to take on real parametric work at a studio, contribute to competition entries, and build a portfolio that gets you interviews. Senior computational design roles take longer than that, and we're honest about it.",
   },
   {
-    question: "What is your refund policy?",
-    answer: "We offer a 7-day money-back guarantee for all courses. If you're not satisfied with the course within the first week, you can request a full refund with no questions asked."
+    question: "How is this different from a YouTube playlist?",
+    answer:
+      "Structure, feedback, accountability, and a cohort. Tutorials teach you to copy. A studio teaches you to design.",
   },
   {
-    question: "How are the mock tests conducted?",
-    answer: "Mock tests are conducted online in a timed, exam-like environment. You'll get detailed analysis including section-wise performance, time management insights, and all-India ranking."
+    question: "Can I get a refund?",
+    answer:
+      "Yes — full refund within the first week if it's not the right fit, no questions asked.",
   },
   {
-    question: "Do you provide interview preparation for M.Arch admissions?",
-    answer: "Yes, our Comprehensive batch includes interview preparation guidance. We conduct mock interviews and provide tips from students who have successfully cleared interviews at IITs, NITs, and SPAs."
-  }
-]
+    question: "Do you offer a certificate?",
+    answer:
+      "Yes, on completion. But the portfolio you build matters more — and we'll tell you that on day one.",
+  },
+];
 
 export function FAQ() {
   return (
@@ -87,5 +95,5 @@ export function FAQ() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

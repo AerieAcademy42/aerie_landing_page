@@ -126,7 +126,7 @@ export function Hero() {
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight text-white opacity-70">
-              Design what was previously impossible to draw{" "}
+              Basics of Computational Design
               {/* <span className="text-white bg-white/20 px-2 rounded">
                 {displayText}
                 <span className="cursor-blink text-white/80">|</span>
@@ -134,6 +134,9 @@ export function Hero() {
               {/* <span className="mt-2 block">previously impossible</span>
               <span className="block text-white/90">to draw</span> */}
             </h1>
+            <h2 className="text-xl sm:text-3xl font-semibold text-white/90 opacity-90 mt-4">
+              (Rhino + Grasshopper)
+            </h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -144,7 +147,8 @@ export function Hero() {
               A focused, mentor-led course that takes you from the basics of
               computational thinking to intermediate parametric workflows in
               Rhino and Grasshopper — built for architects, designers, and
-              students who want to think in systems, not just shapes.
+              students who want to think in systems, not just shapes and bring
+              their ideas into real world application.
             </motion.p>
 
             <motion.div
@@ -159,7 +163,7 @@ export function Hero() {
                 className="text-lg px-8 py-6 bg-white text-blue-700 hover:bg-white/90 font-semibold shadow-xl shadow-blue-900/30"
               >
                 <Link href="#courses">
-                  Explore Courses
+                  Fill your application
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -169,7 +173,7 @@ export function Hero() {
                 asChild
                 className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
               >
-                <Link href="#contact">Get Free Counseling</Link>
+                <Link href="#contact">Download Syllabus</Link>
               </Button>
             </motion.div>
 

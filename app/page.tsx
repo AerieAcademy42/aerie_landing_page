@@ -1,5 +1,6 @@
 import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
+import { ExpertMentors } from "@/components/export-mentor";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
@@ -8,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import Stack from "@/components/stack";
 import { Team } from "@/components/team";
 import { Testimonials } from "@/components/testimonials";
+import WhoIsThisFor from "@/components/WhoItsForSection";
 import WhyAerie from "@/components/why-Aerie";
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <Features /> */}
+      <WhoIsThisFor />
+      <ExpertMentors />
       <About />
       <HowItWorks />
       <Stack />
