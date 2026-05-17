@@ -173,7 +173,7 @@ export function Hero() {
                 asChild
                 className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
               >
-                <Link href="#contact">Download Syllabus</Link>
+                <Link href="#contact">Download Brochure</Link>
               </Button>
             </motion.div>
 

@@ -7,9 +7,7 @@ import { Hero } from "@/components/hero";
 import HowItWorks from "@/components/howit-work";
 import { Navbar } from "@/components/navbar";
 import Stack from "@/components/stack";
-import { Team } from "@/components/team";
-import { Testimonials } from "@/components/testimonials";
-import WhoIsThisFor from "@/components/WhoItsForSection";
+import WhoIsThisFor from "@/components/whoItsFor/WhoItsForSection";
 import WhyAerie from "@/components/why-Aerie";
 
 export default function Home() {
@@ -25,8 +23,8 @@ export default function Home() {
       <Stack />
       <WhyAerie />
       {/* <Courses /> */}
-      <Testimonials />
-      <Team />
+      {/* <Testimonials /> */}
+      {/* <Team /> */}
       <FAQ />
       <Contact />
       <Footer />
