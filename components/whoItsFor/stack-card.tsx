@@ -3,29 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-
-const cards = [
-  {
-    img: "/students.jpg",
-    title: "Students and Beginners",
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    img: "engineers.jpg",
-    title: "Architecture and Engineers",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    img: "/interior.jpg",
-    title: "Interior an Industrial Designers",
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    img: "/ar_er.jpg",
-    title: "Working Professionals",
-    color: "from-green-500 to-teal-500",
-  },
-];
+import { cards } from "./data";
 
 export default function StackCards() {
   const [active, setActive] = useState(0);
@@ -35,7 +13,7 @@ export default function StackCards() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen overflow-hidden">
+    <div className="flex  items-center justify-center min-h-screen overflow-hidden">
       <div
         className="relative w-[380px] h-[500px] cursor-pointer"
         onMouseEnter={rotateCards}
