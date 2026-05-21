@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ContactForm } from "./contact-form";
+import { DialogBox } from "./dialog-box";
 
 const words = ["structured", "comprehensive", "expert-led", "proven"];
 
@@ -42,6 +44,7 @@ export function Hero() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [activeCard, setActiveCard] = useState(0);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
@@ -167,14 +170,31 @@ export function Hero() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button
+              <DialogBox
+                open={open}
+                onOpenChange={setOpen}
+                trigger={
+                  <Button
+                    size="lg"
+                    title="Get the Syllabus"
+                    variant="outline"
+                    asChild
+                    className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
+                  >
+                    <Link href={""}>Download Brochure</Link>
+                  </Button>
+                }
+              >
+                <ContactForm />
+              </DialogBox>
+              {/* <Button
                 size="lg"
                 variant="outline"
                 asChild
                 className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
               >
                 <Link href="#contact">Download Brochure</Link>
-              </Button>
+              </Button> */}
             </motion.div>
 
             {/* Rating inline */}

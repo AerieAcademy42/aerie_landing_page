@@ -1,5 +1,7 @@
 import { About } from "@/components/about/about";
 import { Contact } from "@/components/contact";
+import { CourseCurriculum } from "@/components/course-curriculum";
+import { CoursesData } from "@/components/course-curriculum/data";
 import { ExpertMentors } from "@/components/expert-mentor";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
@@ -19,7 +21,7 @@ export default function Home() {
       <WhoIsThisFor />
       <About />
       <ExpertMentors />
-
+      <CourseCurriculum weeks={CoursesData} />
       <HowItWorks />
       <Stack />
       <WhyAerie />

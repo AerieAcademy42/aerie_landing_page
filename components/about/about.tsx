@@ -145,9 +145,9 @@ export function About() {
       "
     >
       {/* Background Blur Effects */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full" />
+      <div className="absolute top-0 left-0 w-125 h-125 bg-blue-500/20 blur-[120px] rounded-full" />
 
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/20 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 right-0 w-125 h-125 bg-purple-500/20 blur-[120px] rounded-full" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
@@ -197,9 +197,9 @@ export function About() {
                 className="
                   relative
                   w-full
-                  h-[300px]
+                  h-75
                   object-cover
-                  rounded-[32px]
+                  rounded-4xl
                   border
                   border-white/10
                   shadow-2xl
@@ -265,7 +265,7 @@ export function About() {
                   group
                   relative
                   overflow-hidden
-                  rounded-[32px]
+                  rounded-4xl
                   border
                   border-white/10
                   bg-white/5
