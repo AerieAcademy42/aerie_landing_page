@@ -6,6 +6,8 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ContactForm } from "./contact-form";
+import { DialogBox } from "./dialog-box";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,16 +30,6 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link href="/" className="flex items-center gap-2">
-              {/* <img
-                src="Aerie_logo.png"
-                alt="Aerie Academy Logo"
-                className="object-contain"
-              />
-              {/* <span className="text-2xl font-bold text-primary">Aerie</span>
-              <span className="text-2xl font-light text-foreground">
-                Academy
-              </span> */}
-
               <Image
                 src="/Aerie_logo.png"
                 alt="Aerie Academy Logo"
@@ -69,9 +61,17 @@ export function Navbar() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <Button asChild className="gradient-blue border-0 text-white">
-                <Link href="#contact">Contact Us</Link>
-              </Button>
+              <DialogBox
+                open={isOpen}
+                onOpenChange={setIsOpen}
+                trigger={
+                  <Button asChild className="gradient-blue border-0 text-white">
+                    <p>Contact Us</p>
+                  </Button>
+                }
+              >
+                <ContactForm />
+              </DialogBox>
             </motion.div>
           </div>
 
@@ -105,14 +105,20 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <Button
-                asChild
-                className="w-full mt-4 gradient-blue border-0 text-white"
+              <DialogBox
+                open={isOpen}
+                onOpenChange={setIsOpen}
+                trigger={
+                  <Button
+                    asChild
+                    className="w-full mt-4 gradient-blue border-0 text-white"
+                  >
+                    Contact Us
+                  </Button>
+                }
               >
-                <Link href="#contact" onClick={() => setIsOpen(false)}>
-                  Contact Us
-                </Link>
-              </Button>
+                <ContactForm />
+              </DialogBox>
             </div>
           </motion.div>
         )}

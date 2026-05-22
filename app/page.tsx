@@ -1,5 +1,4 @@
 import { About } from "@/components/about/about";
-import { Contact } from "@/components/contact";
 import { CourseCurriculum } from "@/components/course-curriculum";
 import { CoursesData } from "@/components/course-curriculum/data";
 import { ExpertMentors } from "@/components/expert-mentor";
@@ -17,7 +16,6 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      {/* <Features /> */}
       <WhoIsThisFor />
       <About />
       <ExpertMentors />
@@ -25,11 +23,7 @@ export default function Home() {
       <HowItWorks />
       <Stack />
       <WhyAerie />
-      {/* <Courses /> */}
-      {/* <Testimonials /> */}
-      {/* <Team /> */}
       <FAQ />
-      <Contact />
       <Footer />
     </main>
   );

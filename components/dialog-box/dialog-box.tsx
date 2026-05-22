@@ -76,8 +76,8 @@
 import { cn } from "@/lib/utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
-import { X } from "lucide-react";
 import * as React from "react";
+import { DialogTitle } from "../ui/dialog";
 
 interface DialogBoxProps {
   open?: boolean;
@@ -85,6 +85,7 @@ interface DialogBoxProps {
   trigger?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
+  title?: string;
 }
 
 export function DialogBox({
@@ -93,6 +94,7 @@ export function DialogBox({
   trigger,
   children,
   className,
+  title,
 }: DialogBoxProps) {
   return (
     <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
@@ -129,12 +131,13 @@ export function DialogBox({
                   className,
                 )}
               >
+                <DialogTitle>{title}</DialogTitle>
                 {/* Close Button */}
-                <DialogPrimitive.Close asChild>
+                {/* <DialogPrimitive.Close asChild>
                   <button className="absolute right-5 top-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/80 backdrop-blur transition-all hover:scale-105 hover:bg-white">
                     <X className="h-5 w-5 text-neutral-700" />
                   </button>
-                </DialogPrimitive.Close>
+                </DialogPrimitive.Close> */}
 
                 {children}
               </motion.div>

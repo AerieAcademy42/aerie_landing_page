@@ -155,13 +155,13 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
 const courses = [
-  "Frontend Development",
-  "Full Stack Development",
-  "UI/UX Design",
-  "Motion Design",
-  "React Masterclass",
+  "Architecture",
+  "Foundation Batch",
+  "Comprehensive Batch",
+  "Test Series Only",
 ];
 
 export function ContactForm() {
@@ -180,7 +180,8 @@ export function ContactForm() {
   };
 
   return (
-    <div className="grid h-120  grid-cols-1 lg:grid-cols-2">
+    <div className="grid min-h-[auto] lg:h-120 grid-cols-1 lg:grid-cols-2">
+      {" "}
       {/* LEFT SECTION */}
       <div className="flex flex-col justify-center px-6 py-2 sm:px-10 lg:px-4">
         <motion.div
@@ -188,9 +189,12 @@ export function ContactForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
         >
-          <h2 className="md:text-3xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
+          <h2 className="md:text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
             Get the syllabus
           </h2>
+          <p className="text-sm text-gray-600 mt-1">
+            Send us a message and we&apos;ll respond quickly.
+          </p>
         </motion.div>
 
         {!success ? (
@@ -218,8 +222,10 @@ export function ContactForm() {
               className="h-10 rounded-2xl border-neutral-200 px-5 text-base shadow-none focus-visible:ring-2 focus-visible:ring-orange-300"
             />
 
-            <select className="h-10 w-full rounded-2xl border border-neutral-200 bg-white px-5 text-base text-neutral-700 outline-none transition focus:ring-2 focus:ring-orange-300">
-              <option>Select Course</option>
+            <select className="h-10 w-full rounded-2xl border border-neutral-200 bg-white px-5  outline-none transition focus:ring-2 focus:ring-orange-300">
+              <option className="text-base text-neutral-700">
+                Select specialization*{" "}
+              </option>
 
               {courses.map((course) => (
                 <option key={course}>{course}</option>
@@ -229,7 +235,7 @@ export function ContactForm() {
             <Button
               type="submit"
               disabled={loading}
-              className="h-14 w-full rounded-2xl bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 text-base font-semibold text-white shadow-lg shadow-orange-200 transition-all hover:scale-[1.01] hover:opacity-95"
+              className="h-10 w-full rounded-2xl gradient-blue text-base font-semibold text-white shadow-lg shadow-orange-200 transition-all hover:scale-[1.01] hover:opacity-95"
             >
               {loading ? (
                 <>
@@ -264,56 +270,14 @@ export function ContactForm() {
           </motion.div>
         )}
       </div>
-
-      {/* RIGHT SECTION */}
-      <div className="relative hidden overflow-hidden bg-gradient-to-br from-blue-500 via-blue-200 to-blue-500 lg:block">
-        {/* Decorative Circles */}
-        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
-        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20" />
-
-        {/* Floating Card */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
-          className="absolute left-1/2 top-1/2 w-[82%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-[30px] bg-white p-8 shadow-2xl"
-        >
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-100">
-              <BookOpen className="h-6 w-6 text-orange-500" />
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-neutral-900">
-                Course curriculum
-              </h3>
-
-              <p className="text-sm text-neutral-500">
-                Industry-focused learning path
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 space-y-4">
-            {[
-              // "Modern UI Design System",
-              // "Advanced React Patterns",
-              // "Framer Motion Animations",
-              // "Real-world Projects",
-              // "Production Deployment",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-4 rounded-2xl border border-neutral-100 p-4"
-              >
-                <div className="h-3 w-3 rounded-full bg-gradient-to-r from-orange-400 to-pink-500" />
-
-                <p className="font-medium text-neutral-700">{item}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div> */}
+      <div>
+        <Image
+          src="/course-curicullum.png"
+          alt="Contact Form"
+          width={100}
+          height={100}
+          className=" h-full w-100  object-center   "
+        />
       </div>
     </div>
   );
