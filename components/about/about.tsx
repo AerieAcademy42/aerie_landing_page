@@ -145,9 +145,9 @@ export function About() {
       "
     >
       {/* Background Blur Effects */}
-      <div className="absolute top-0 left-0 w-125 h-125 bg-blue-500/20 blur-[120px] rounded-full" />
+      {/* <div className="absolute top-0 left-0 w-125 h-125 bg-blue-500/20 blur-[120px] rounded-full" /> */}
 
-      <div className="absolute bottom-0 right-0 w-125 h-125 bg-purple-500/20 blur-[120px] rounded-full" />
+      {/* <div className="absolute bottom-0 right-0 w-125 h-125 bg-purple-500/20 blur-[120px] rounded-full" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
@@ -166,7 +166,7 @@ export function About() {
             className="
               text-4xl
               sm:text-5xl
-              md:text-6xl
+              md:text-4xl
               font-bold
               text-center
               text-white
@@ -217,7 +217,7 @@ export function About() {
               <p
                 className="
                   text-lg
-                  md:text-xl
+                  md:text-lg
                   text-white/70
                   leading-relaxed
                 "

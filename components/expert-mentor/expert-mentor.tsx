@@ -6,8 +6,8 @@ import { MentorCard } from "./mentor-card";
 
 export function ExpertMentors() {
   return (
-    <section className="px-6 py-16 md:px-12 md:py-24">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-6  md:px-12 md:py-24">
+      <div className="max-w-6xl mx-auto">
         {/* Section Label */}
         <motion.div
           initial={{ opacity: 0 }}

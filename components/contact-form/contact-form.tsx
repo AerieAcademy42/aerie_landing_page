@@ -37,36 +37,6 @@ export function ContactForm() {
     },
   });
 
-  // const onSubmit = async (values: LeadFormValues) => {
-  //   try {
-  //     setLoading(true);
-
-  //     const response = await fetch("/api/lead", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         ...values,
-  //         source: "Landing Page",
-  //       }),
-  //     });
-
-  //     const data = await response.json();
-
-  //     if (!data.success) {
-  //       throw new Error(data.message);
-  //     }
-
-  //     setSuccess(true);
-  //     reset();
-  //   } catch (error) {
-  //     console.log(error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   const onSubmit = async (values: LeadFormValues) => {
     if (loading) return;
 
@@ -156,7 +126,7 @@ export function ContactForm() {
             <div>
               <select
                 {...register("course")}
-                className="h-10 w-full rounded-2xl border border-neutral-200 bg-white px-5  outline-none transition focus:ring-2 focus:ring-orange-300"
+                className="h-10 w-full rounded-2xl border border-neutral-200  px-5  outline-none transition focus:ring-2 focus:ring-orange-300"
               >
                 <option className="text-base text-neutral-700">
                   Select specialization*{" "}

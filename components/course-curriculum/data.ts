@@ -7,6 +7,14 @@ interface WeekContent {
     img?: string;
     videoUrl?: string;
 }
+interface VideoItem {
+    id: number;
+    src: string;
+    aspectRatio: "portrait" | "landscape" | "square";
+    colSpan: string;
+    rowSpan: string;
+}
+
 
 export interface CourseCurriculumProps {
     weeks: WeekContent[];
@@ -172,4 +180,50 @@ export const CoursesData = [
             'Portfolio-Ready Documentation & Presentation',
         ],
     },
+];
+
+
+export const videos: VideoItem[] = [
+    {
+        id: 1,
+        src: "/course-curiculum/architect-1.mp4",
+        aspectRatio: "landscape",
+        colSpan: "col-span-3",
+        rowSpan: "row-span-1",
+    },
+    {
+        id: 2,
+        src: "/course-curiculum/architect.mp4",
+        aspectRatio: "square",
+        colSpan: "col-span-1",
+        rowSpan: "row-span-1",
+    },
+    {
+        id: 3,
+        src: "/course-curiculum/architect.mp4",
+        aspectRatio: "landscape",
+        colSpan: "col-span-2",
+        rowSpan: "row-span-1",
+    },
+    {
+        id: 4,
+        src: "/course-curiculum/architect-3.mp4",
+        aspectRatio: "square",
+        colSpan: "col-span-2",
+        rowSpan: "row-span-2",
+    },
+    {
+        id: 5,
+        src: "/course-curiculum/architect-4.mp4",
+        aspectRatio: "landscape",
+        colSpan: "col-span-2",
+        rowSpan: "row-span-1",
+    },
+    //   {
+    //     id: 6,
+    //     src: "https://videos.pexels.com/video-files/3529173/3529173-hd_1280_720_25fps.mp4",
+    //     aspectRatio: "portrait",
+    //     colSpan: "col-span-1",
+    //     rowSpan: "row-span-2",
+    //   },
 ];
