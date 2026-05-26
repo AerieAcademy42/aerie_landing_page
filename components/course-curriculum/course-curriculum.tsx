@@ -11,7 +11,7 @@ export function CourseCurriculum({ weeks }: CourseCurriculumProps) {
   );
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-16">
+    <div id="course" className="w-full max-w-6xl mx-auto px-4 py-16 ">
       <div className="mb-12">
         <h1 className="text-blue-500 uppercase tracking-[0.3em] font-semibold mb-4">
           Course Curriculum

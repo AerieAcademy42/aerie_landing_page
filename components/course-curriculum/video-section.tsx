@@ -10,7 +10,7 @@ export function VideoSection() {
   const getAspectRatioClass = (aspectRatio: string) => {
     switch (aspectRatio) {
       case "portrait":
-        return "aspect-[2/5]";
+        return "aspect-[3/4]";
       case "landscape":
         return "aspect-video";
       case "square":
@@ -57,18 +57,6 @@ export function VideoSection() {
 
   return (
     <div className="relative">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute inset-0 opacity-10"
-          // style={{
-          //   backgroundImage:
-          //     "linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)",
-          //   backgroundSize: "50px 50px",
-          // }}
-        />
-      </div>
-
       {/* Floating blur circles */}
       <motion.div
         className="absolute -top-40 -left-40 w-96 h-96 rounded-full blur-3xl pointer-events-none"
@@ -87,7 +75,7 @@ export function VideoSection() {
         }}
       />
       <motion.div
-        className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full blur-3xl pointer-events-none"
+        className="absolute -top-20 -left-20 w-56 h-56 md:w-96 md:h-96 rounded-full blur-3xl pointer-events-none"
         style={{
           background:
             "radial-gradient(circle, rgba(124, 58, 255, 0.15) 0%, transparent 70%)",
@@ -105,7 +93,15 @@ export function VideoSection() {
 
       {/* Masonry Grid */}
       <motion.div
-        className="grid grid-cols-4 gap-4 relative z-10 lg:gap-1"
+        className="
+  grid
+  grid-cols-2
+  md:grid-cols-3
+  lg:grid-cols-4
+  gap-3
+  relative
+  z-10
+"
         variants={containerVariants}
         initial="initial"
         animate="animate"

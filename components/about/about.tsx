@@ -1,108 +1,3 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { ExpertMentors } from "../expert-mentor";
-// import { values } from "./data";
-
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.15 },
-//   },
-// };
-
-// const itemVariants = {
-//   hidden: { opacity: 0, x: -30 },
-//   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-// };
-
-// export function About() {
-//   return (
-//     <section
-//       id="about"
-//       className="px-4 py-16 bg-gradient-to-b from-blue-50 to-blue-100"
-//     >
-//       <div className="max-w-7xl mx-auto">
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6 }}
-//           className="mb-16"
-//         >
-//           {/* Top Heading */}
-//           <h2 className="text-3xl sm:text-4xl font-bold text-center text-foreground mb-10">
-//             About <span className="text-primary">Aerie</span>
-//           </h2>
-
-//           {/* Bottom Content */}
-//           <div className="flex items-center justify-between gap-10">
-//             <div className="flex-1 flex justify-center">
-//               <img
-//                 src="/academy.jpg"
-//                 alt="Academy"
-//                 className="w-full h-[250px] max-w-md rounded-2xl object-cover"
-//               />
-//             </div>
-//             <div className="flex-1">
-//               <p className="text-muted-foreground text-lg leading-relaxed">
-//                 Aerie Academy is India’s fastest-growing edtech platform for
-//                 architecture students. Built by architects, for architects. We
-//                 bridge the gap between classroom learning and real-world
-//                 professional demands, empowering students to crack top colleges
-//                 and shape successful careers. We connect students with the jobs
-//                 and help in upskilling!!
-//               </p>
-//             </div>
-
-//             {/* Right Side */}
-//           </div>
-//         </motion.div>
-//         <motion.div
-//           variants={containerVariants}
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true }}
-//           className="grid md:grid-cols-2 gap-8"
-//         >
-//           {values.map((value) => (
-//             <motion.div
-//               key={value.title}
-//               variants={itemVariants}
-//               whileHover={{ scale: 1.02 }}
-//             >
-//               <div className="  h-full flex gap-6 p-6 rounded-2xl border border-blue-100 shadow-lg hover:shadow-xl transition-shadow">
-//                 <div className="shrink-0">
-//                   <div className="h-60 w-40 rounded-xl gradient-blue flex items-center justify-center">
-//                     <img
-//                       src={value.img}
-//                       alt={value.title}
-//                       className="h-full w-full object-cover rounded-xl"
-//                     />
-//                   </div>
-//                 </div>
-//                 <div>
-//                   <h3 className="text-xl font-semibold text-foreground mb-1">
-//                     {value.title}
-//                   </h3>
-//                   <h2 className="text-xl font-medium text-primary mb-1">
-//                     {value.name}
-//                   </h2>
-//                   <p className=" text-sm text-muted-foreground leading-relaxed">
-//                     {value.description}
-//                   </p>
-//                 </div>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </motion.div>
-//       </div>
-//       <ExpertMentors />
-//     </section>
-//   );
-// }
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -144,12 +39,7 @@ export function About() {
         bg-[#07111f]
       "
     >
-      {/* Background Blur Effects */}
-      {/* <div className="absolute top-0 left-0 w-125 h-125 bg-blue-500/20 blur-[120px] rounded-full" /> */}
-
-      {/* <div className="absolute bottom-0 right-0 w-125 h-125 bg-purple-500/20 blur-[120px] rounded-full" /> */}
-
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -192,7 +82,7 @@ export function About() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 blur-3xl rounded-[40px]" />
 
               <img
-                src="/academy.jpg"
+                src="/explore.jpg"
                 alt="Academy"
                 className="
                   relative

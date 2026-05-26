@@ -186,14 +186,14 @@ export const CoursesData = [
 export const videos: VideoItem[] = [
     {
         id: 1,
-        src: "/course-curiculum/architect-1.mp4",
+        src: "/course-curiculum/architect-6.mp4",
         aspectRatio: "landscape",
         colSpan: "col-span-3",
         rowSpan: "row-span-1",
     },
     {
         id: 2,
-        src: "/course-curiculum/architect.mp4",
+        src: "/course-curiculum/architect-5.mp4",
         aspectRatio: "square",
         colSpan: "col-span-1",
         rowSpan: "row-span-1",

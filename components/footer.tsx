@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Facebook, Instagram, Twitter, Youtube, Linkedin, Heart } from "lucide-react"
+import { motion } from "framer-motion";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import Link from "next/link";
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
@@ -10,7 +10,7 @@ const socialLinks = [
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Youtube, href: "#", label: "YouTube" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
-]
+];
 
 export function Footer() {
   return (
@@ -24,7 +24,8 @@ export function Footer() {
               <span className="text-2xl font-light text-white/80">Academy</span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
-              Empowering future architects and planners to achieve their dreams through quality education and expert guidance.
+              Empowering future architects and planners to achieve their dreams
+              through quality education and expert guidance.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -49,7 +50,10 @@ export function Footer() {
               {["Features", "Courses", "Our Team", "FAQ"].map((item) => (
                 <li key={item}>
                   <motion.div whileHover={{ x: 4 }}>
-                    <Link href={`#${item.toLowerCase().replace(" ", "-")}`} className="text-white/70 hover:text-white transition-colors text-sm">
+                    <Link
+                      href={`#${item.toLowerCase().replace(" ", "-")}`}
+                      className="text-white/70 hover:text-white transition-colors text-sm"
+                    >
                       {item}
                     </Link>
                   </motion.div>
@@ -62,10 +66,18 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-3">
-              {["Free Study Material", "Previous Year Papers", "GATE Syllabus", "Blog"].map((item) => (
+              {[
+                "Study Material",
+                "Previous Year Papers",
+                "GATE Syllabus",
+                "Blog",
+              ].map((item) => (
                 <li key={item}>
                   <motion.div whileHover={{ x: 4 }}>
-                    <Link href="#" className="text-white/70 hover:text-white transition-colors text-sm">
+                    <Link
+                      href="#"
+                      className="text-white/70 hover:text-white transition-colors text-sm"
+                    >
                       {item}
                     </Link>
                   </motion.div>
@@ -78,15 +90,20 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Legal</h4>
             <ul className="space-y-3">
-              {["Privacy Policy", "Terms of Service", "Refund Policy", "Contact Us"].map((item) => (
-                <li key={item}>
-                  <motion.div whileHover={{ x: 4 }}>
-                    <Link href={item === "Contact Us" ? "#contact" : "#"} className="text-white/70 hover:text-white transition-colors text-sm">
-                      {item}
-                    </Link>
-                  </motion.div>
-                </li>
-              ))}
+              {["Privacy Policy", "Terms of Service", , "Contact Us"].map(
+                (item) => (
+                  <li key={item}>
+                    <motion.div whileHover={{ x: 4 }}>
+                      <Link
+                        href={item === "Contact Us" ? "#contact" : "#"}
+                        className="text-white/70 hover:text-white transition-colors text-sm"
+                      >
+                        {item}
+                      </Link>
+                    </motion.div>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
         </div>
@@ -97,11 +114,11 @@ export function Footer() {
               © {new Date().getFullYear()} Aerie Academy. All rights reserved.
             </p>
             <p className="text-white/60 text-sm flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> for GATE aspirants
+              Made with for GATE
             </p>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

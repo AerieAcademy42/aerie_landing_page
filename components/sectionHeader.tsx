@@ -20,7 +20,7 @@ export default function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-sm font-semibold mb-4 uppercase tracking-wide"
+        className="text-sm font-semibold mb-4 uppercase tracking-wide text-blue-500"
       >
         {label}
       </motion.p>
@@ -29,7 +29,7 @@ export default function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-5xl  font-bold text-foreground mb-4"
+        className="text-3xl md:text-3xl  font-bold text-foreground mb-4"
       >
         {title}
       </motion.h2>

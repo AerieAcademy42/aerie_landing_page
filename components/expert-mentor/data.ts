@@ -19,7 +19,7 @@ export const mentorsData: Mentor[] = [
     },
     {
         id: 2,
-        name: "Naitik",
+        name: " Ar. Naitik Sharma",
         role: "Computational Designer",
         image: "/mentors/mentor2.png",
         description:

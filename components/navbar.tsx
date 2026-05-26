@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -8,13 +7,15 @@ import Link from "next/link";
 import { useState } from "react";
 import { ContactForm } from "./contact-form";
 import { DialogBox } from "./dialog-box";
+import { Button } from "./ui/button";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#features", label: "Features" },
-    { href: "#courses", label: "Courses" },
+    { href: "#course", label: "course" },
+    { href: "#about", label: "about" },
     { href: "#team", label: "Team" },
     { href: "#faq", label: "FAQ" },
   ];
@@ -24,7 +25,7 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-blue-100"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-blue-100"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -77,16 +78,16 @@ export function Navbar() {
 
           <button
             className="md:hidden text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       <AnimatePresence>
-        {isOpen && (
+        {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
@@ -99,26 +100,12 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     className="block text-foreground/70 hover:text-primary transition-colors py-2 font-medium"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-              <DialogBox
-                open={isOpen}
-                onOpenChange={setIsOpen}
-                trigger={
-                  <Button
-                    asChild
-                    className="w-full mt-4 gradient-blue border-0 text-white"
-                  >
-                    Contact Us
-                  </Button>
-                }
-              >
-                <ContactForm />
-              </DialogBox>
             </div>
           </motion.div>
         )}

@@ -9,7 +9,7 @@ export const values = [
     {
         img: "/mentors/mentor2.png",
         title: "Program Head",
-        name: "Ar. Natik Sharma",
+        name: "Ar. Naitik Sharma",
         description:
             "a computational architect with 6+ years of experience and a Master's in Advanced Computation for Architecture & Design (MaCAD) from the Institute for Advanced Architecture of Catalonia (IAAC), Barcelona and currently pursuing an M.A. in Computation in Architecture at the Royal Danish Academy, Copenhagen.",
     },

@@ -6,7 +6,7 @@ import { MentorCard } from "./mentor-card";
 
 export function ExpertMentors() {
   return (
-    <section className="px-6  md:px-12 md:py-24">
+    <section id="team" className="px-6  md:px-12 md:py-24">
       <div className="max-w-6xl mx-auto">
         {/* Section Label */}
         <motion.div

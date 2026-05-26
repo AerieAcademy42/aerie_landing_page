@@ -1,3 +1,4 @@
+import { WhatsAppButton } from "@/components/whats-up-button";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -28,8 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased `}>
         {children}
+        <WhatsAppButton />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

@@ -23,19 +23,19 @@ const carouselCards = [
     title: "Live Interactive Classes",
     description: "Learn directly from IIT/NIT alumni",
     icon: Play,
-    color: "bg-gradient-to-br from-blue-500 to-blue-600",
+    color: "gradient-blue",
   },
   {
     title: "Comprehensive Study Material",
     description: "1000+ pages of curated content",
     icon: BookOpen,
-    color: "bg-gradient-to-br from-blue-600 to-indigo-600",
+    color: "gradient-blue",
   },
   {
     title: "Mock Tests & Analysis",
     description: "50+ full-length tests with detailed analytics",
     icon: CheckCircle,
-    color: "bg-gradient-to-br from-indigo-500 to-blue-500",
+    color: "gradient-blue",
   },
 ];
 
@@ -84,7 +84,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-900 to-[rgb(77,113,197)] relative overflow-hidden pt-10">
+    <section className=" bg-[linear-gradient(to_bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/bg-img-4.jpg')]  bg-cover    min-h-screen bg-gradient-to-br  from-slate-900 to-[rgb(77,113,197)] relative overflow-hidden pt-10">
       {/* Animated background elements */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
@@ -107,7 +107,7 @@ export function Hero() {
         className="absolute top-1/2 right-1/4 w-3 h-3 bg-white/20 rounded-full"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 py-12 lg:py-20">
+      <div className="relative max-w-6xl mx-auto px-4 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left side - Text content */}
           <motion.div
