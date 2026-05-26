@@ -5,7 +5,7 @@ import { ExpertMentors } from "@/components/expert-mentor";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/navbar/navbar";
 import WhoIsThisFor from "@/components/whoItsFor/WhoItsForSection";
 import { WhyAerie } from "@/components/why-aerie";
 

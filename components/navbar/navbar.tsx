@@ -5,9 +5,9 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ContactForm } from "./contact-form";
-import { DialogBox } from "./dialog-box";
-import { Button } from "./ui/button";
+import { ContactForm } from "../contact-form";
+import { DialogBox } from "../dialog-box";
+import { Button } from "../ui/button";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

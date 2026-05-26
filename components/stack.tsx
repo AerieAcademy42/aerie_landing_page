@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import GridCard from "./gridCard";
-import SectionHeader from "./sectionHeader";
+import SectionHeader from "./why-aerie/sectionHeader";
 
 const stackItems = [
   {

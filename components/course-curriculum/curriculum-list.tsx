@@ -39,8 +39,6 @@ export default function CurriculumList({ weeks }: CourseCurriculumProps) {
               }}
               className={`
                     rounded-3xl border overflow-hidden
-                    backdrop-blur-xl
-                    bg-white/5
                     transition-all
                     ${
                       active

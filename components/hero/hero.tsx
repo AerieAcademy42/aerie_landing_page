@@ -2,15 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ArrowRight,
-  Award,
-  BookOpen,
-  CheckCircle,
-  Play,
-  Star,
-  Users,
-} from "lucide-react";
+import { Award, BookOpen, CheckCircle, Play, Star, Users } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ContactForm } from "../contact-form";
@@ -130,12 +122,6 @@ export function Hero() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight text-white opacity-70">
               Basics of Computational Design
-              {/* <span className="text-white bg-white/20 px-2 rounded">
-                {displayText}
-                <span className="cursor-blink text-white/80">|</span>
-              </span> */}
-              {/* <span className="mt-2 block">previously impossible</span>
-              <span className="block text-white/90">to draw</span> */}
             </h1>
             <h2 className="text-xl sm:text-3xl font-semibold text-white/90 opacity-90 mt-4">
               (Rhino + Grasshopper)
@@ -160,16 +146,6 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 pt-8"
             >
-              <Button
-                size="lg"
-                asChild
-                className="text-lg px-8 py-6 bg-white text-blue-700 hover:bg-white/90 font-semibold shadow-xl shadow-blue-900/30"
-              >
-                <Link href="#courses">
-                  Fill your application
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
               <DialogBox
                 open={open}
                 onOpenChange={setOpen}
@@ -187,14 +163,6 @@ export function Hero() {
               >
                 <ContactForm />
               </DialogBox>
-              {/* <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
-              >
-                <Link href="#contact">Download Brochure</Link>
-              </Button> */}
             </motion.div>
 
             {/* Rating inline */}
