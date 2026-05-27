@@ -35,11 +35,6 @@ const faqs = [
       "Structure, feedback, accountability, and a cohort. Tutorials teach you to copy. A studio teaches you to design.",
   },
   {
-    question: "Can I get a refund?",
-    answer:
-      "Yes — full refund within the first week if it's not the right fit, no questions asked.",
-  },
-  {
     question: "Do you offer a certificate?",
     answer:
       "Yes, on completion. But the portfolio you build matters more — and we'll tell you that on day one.",

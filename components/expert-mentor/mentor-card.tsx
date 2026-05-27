@@ -44,30 +44,6 @@ export const MentorCard = ({
           <h3 className="text-white font-bold text-lg">{mentor.name}</h3>
           <p className="text-blue-200 text-sm">{mentor.role}</p>
         </motion.div>
-
-        {/* Hover Description Overlay */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0 bg-black/80 backdrop-blur-sm rounded-xl flex flex-col justify-center items-center p-6"
-        >
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: isHovered ? 1 : 0.8, opacity: isHovered ? 1 : 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-            className="text-center"
-          >
-            {mentor.company && (
-              <p className="text-red-500 font-bold text-sm mb-3 uppercase tracking-wide">
-                {mentor.company}
-              </p>
-            )}
-            <p className="text-white text-sm leading-relaxed">
-              {mentor.description}
-            </p>
-          </motion.div>
-        </motion.div>
       </div>
     </motion.div>
   );

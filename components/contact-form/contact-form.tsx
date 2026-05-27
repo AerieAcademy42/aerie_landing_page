@@ -13,9 +13,10 @@ import { LeadFormValues, leadSchema } from "./validatIon";
 
 const courses = [
   "Architecture",
-  "Foundation Batch",
-  "Comprehensive Batch",
-  "Test Series Only",
+  "interior Design",
+  "Civil Engineering",
+  "Mechanical/Electrical Engg",
+  "Others",
 ];
 
 export function ContactForm() {
