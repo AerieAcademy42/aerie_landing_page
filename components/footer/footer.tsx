@@ -66,23 +66,20 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-3">
-              {[
-                "Study Material",
-                "Previous Year Papers",
-                "GATE Syllabus",
-                "Blog",
-              ].map((item) => (
-                <li key={item}>
-                  <motion.div whileHover={{ x: 4 }}>
-                    <Link
-                      href="#"
-                      className="text-white/70 hover:text-white transition-colors text-sm"
-                    >
-                      {item}
-                    </Link>
-                  </motion.div>
-                </li>
-              ))}
+              {["Study Material", "Previous Year Papers", "Blog"].map(
+                (item) => (
+                  <li key={item}>
+                    <motion.div whileHover={{ x: 4 }}>
+                      <Link
+                        href="#"
+                        className="text-white/70 hover:text-white transition-colors text-sm"
+                      >
+                        {item}
+                      </Link>
+                    </motion.div>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 

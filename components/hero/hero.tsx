@@ -76,7 +76,7 @@ export function Hero() {
   ];
 
   return (
-    <section className=" bg-[linear-gradient(to_bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/bg-img-4.jpg')]  bg-cover    min-h-screen bg-gradient-to-br  from-slate-900 to-[rgb(77,113,197)] relative overflow-hidden pt-10">
+    <section className=" bg-[linear-gradient(to_bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/bg-img-4.jpg')]  bg-cover    min-h-screen  relative overflow-hidden pt-10">
       {/* Animated background elements */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
@@ -192,7 +192,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative h-[500px] hidden lg:block"
+            className="relative h-125 hidden lg:block"
           >
             {/* Main floating card */}
             <div className="relative w-full h-full flex items-center justify-center">

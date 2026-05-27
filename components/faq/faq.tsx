@@ -25,11 +25,6 @@ const faqs = [
       "Every session is recorded. You'll also have weekly office hours and a cohort channel to catch up. We recommend attending live, but the course is built so that life can happen without you falling behind.",
   },
   {
-    question: "What if I miss a live class?",
-    answer:
-      "All live classes are recorded and uploaded within 24 hours. You can watch them at your convenience. However, we encourage attending live sessions for real-time doubt clearing.",
-  },
-  {
     question: "Is this enough to get a job in computational design?",
     answer:
       "Three months gets you to a strong intermediate level — enough to take on real parametric work at a studio, contribute to competition entries, and build a portfolio that gets you interviews. Senior computational design roles take longer than that, and we're honest about it.",

@@ -14,8 +14,8 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#course", label: "course" },
-    { href: "#about", label: "about" },
+    { href: "#course", label: "Course" },
+    { href: "#about", label: "About" },
     { href: "#team", label: "Team" },
     { href: "#faq", label: "FAQ" },
   ];

@@ -13,9 +13,9 @@ export default function StackCards() {
   };
 
   return (
-    <div className="flex  items-center justify-center min-h-screen overflow-hidden">
+    <div className="flex  items-center justify-center  overflow-hidden">
       <div
-        className="relative w-[380px] h-[500px] cursor-pointer"
+        className="relative w-95 h-125 cursor-pointer"
         onMouseEnter={rotateCards}
       >
         {cards.map((card, index) => {
@@ -50,15 +50,15 @@ export default function StackCards() {
               className={`
     absolute
     inset-0
-    rounded-[32px]
-    bg-gradient-to-br
+    rounded-4xl
+    bg-linear-to-br
     ${card.color}
     shadow-2xl
     p-8
     cursor-grab
   `}
             >
-              <div className="relative w-full h-[300px] mb-6 overflow-hidden rounded-2xl">
+              <div className="relative w-full h-75 mb-6 overflow-hidden rounded-2xl">
                 <Image
                   src={card.img}
                   alt={card.title}

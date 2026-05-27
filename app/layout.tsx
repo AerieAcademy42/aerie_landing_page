@@ -7,7 +7,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Aerie Academy | GATE 2026 Architecture & Planning",
+  title: "Basic of Computational Design (Rhino + Grasshopper) | 2026",
   description:
     "Join 3000+ students who have trusted Aerie Academy to crack IITs, NITs & SPAs. Structured program for GATE 2026 Architecture & Planning.",
   generator: "v0.app",

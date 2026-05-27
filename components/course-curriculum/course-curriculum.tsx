@@ -24,7 +24,7 @@ export function CourseCurriculum({ weeks }: CourseCurriculumProps) {
 
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* LEFT */}
-        <div className="sticky top-10">
+        <div className="lg:sticky lg:top-10">
           <VideoSection />
         </div>
 

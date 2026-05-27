@@ -72,7 +72,7 @@ export function ContactForm() {
     }
   };
   return (
-    <div className="grid min-h-[auto] lg:h-120 grid-cols-1 lg:grid-cols-2">
+    <div className="grid min-h-auto lg:h-120 grid-cols-1 lg:grid-cols-2">
       {" "}
       {/* LEFT SECTION */}
       <div className="flex flex-col justify-center px-6 py-2 sm:px-10 lg:px-4">
@@ -128,7 +128,12 @@ export function ContactForm() {
                 {...register("course")}
                 className="h-10 w-full rounded-2xl border border-neutral-200  px-5  outline-none transition focus:ring-2 focus:ring-orange-300"
               >
-                <option className="text-base text-neutral-700">
+                <option
+                  value=""
+                  disabled
+                  hidden
+                  className="text-base text-neutral-300"
+                >
                   Select specialization*{" "}
                 </option>
 
