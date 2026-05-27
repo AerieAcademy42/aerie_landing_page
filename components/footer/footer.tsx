@@ -5,11 +5,27 @@ import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  {
+    icon: Facebook,
+    href: "#",
+    label: "Facebook",
+  },
+  {
+    icon: Instagram,
+    href: "https://instagram.com/aerie.architecture",
+    label: "Instagram",
+  },
   { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  {
+    icon: Youtube,
+    href: "https://youtube.com/@AERIEACADEMY",
+    label: "YouTube",
+  },
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/company/aerie-architecture",
+    label: "LinkedIn",
+  },
 ];
 
 export function Footer() {
