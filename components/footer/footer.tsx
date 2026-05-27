@@ -47,7 +47,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {["Features", "Courses", "Our Team", "FAQ"].map((item) => (
+              {["About", "Course", "Team", "FAQ"].map((item) => (
                 <li key={item}>
                   <motion.div whileHover={{ x: 4 }}>
                     <Link
@@ -66,20 +66,18 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-3">
-              {["Study Material", "Previous Year Papers", "Blog"].map(
-                (item) => (
-                  <li key={item}>
-                    <motion.div whileHover={{ x: 4 }}>
-                      <Link
-                        href="#"
-                        className="text-white/70 hover:text-white transition-colors text-sm"
-                      >
-                        {item}
-                      </Link>
-                    </motion.div>
-                  </li>
-                ),
-              )}
+              {["Study Material", "Blog"].map((item) => (
+                <li key={item}>
+                  <motion.div whileHover={{ x: 4 }}>
+                    <Link
+                      href="#"
+                      className="text-white/70 hover:text-white transition-colors text-sm"
+                    >
+                      {item}
+                    </Link>
+                  </motion.div>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -109,9 +107,6 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
               © {new Date().getFullYear()} Aerie Academy. All rights reserved.
-            </p>
-            <p className="text-white/60 text-sm flex items-center gap-1">
-              Made with for GATE
             </p>
           </div>
         </div>

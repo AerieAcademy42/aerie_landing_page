@@ -72,7 +72,7 @@ export function Hero() {
   const stats = [
     { icon: Users, number: "3000+", label: "Students Enrolled" },
     { icon: Award, number: "500+", label: "IIT/NIT Selections" },
-    { icon: BookOpen, number: "50+", label: "Expert Faculty" },
+    { icon: BookOpen, number: "50+", label: "Expert Mentors" },
   ];
 
   return (
@@ -183,7 +183,7 @@ export function Hero() {
                   ))}
                 </div>
               </div>
-              <span className="text-white/70 text-sm">500+ Google Reviews</span>
+              <span className="text-white/70 text-sm"> Google Reviews</span>
             </motion.div>
           </motion.div>
 
@@ -266,7 +266,7 @@ export function Hero() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900">50+</div>
-                    <div className="text-xs text-gray-500">Expert Faculty</div>
+                    <div className="text-xs text-gray-500">Expert Mentors</div>
                   </div>
                 </div>
               </motion.div>
